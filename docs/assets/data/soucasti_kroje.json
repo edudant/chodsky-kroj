@@ -1,0 +1,160 @@
+{
+  "data": [
+    {
+      "nazev": "Fjertuch Barevna",
+      "typ": "FJERTUCH",
+      "barva": "BAREVNA",
+      "file": "fjertuch_barevna.jpeg"
+    },
+    {
+      "nazev": "Fjertuch Barevna 2",
+      "typ": "FJERTUCH",
+      "barva": "BAREVNA 2",
+      "file": "fjertuch_barevna_2.jpeg"
+    },
+    {
+      "nazev": "Fjertuch Cervena",
+      "typ": "FJERTUCH",
+      "barva": "CERVENA",
+      "file": "fjertuch_cervena.jpeg"
+    },
+    {
+      "nazev": "Fjertuch Fialova",
+      "typ": "FJERTUCH",
+      "barva": "FIALOVA",
+      "file": "fjertuch_fialova.jpeg"
+    },
+    {
+      "nazev": "Fjertuch Fialova 2",
+      "typ": "FJERTUCH",
+      "barva": "FIALOVA 2",
+      "file": "fjertuch_fialova_2.jpeg"
+    },
+    {
+      "nazev": "Fjertuch Hneda",
+      "typ": "FJERTUCH",
+      "barva": "HNEDA",
+      "file": "fjertuch_hneda.jpeg"
+    },
+    {
+      "nazev": "Fjertuch Modra",
+      "typ": "FJERTUCH",
+      "barva": "MODRA",
+      "file": "fjertuch_modra.jpeg"
+    },
+    {
+      "nazev": "Fjertuch Ruzova",
+      "typ": "FJERTUCH",
+      "barva": "RUZOVA",
+      "file": "fjertuch_ruzova.jpeg"
+    },
+    {
+      "nazev": "Fjertuch Ruzova 2",
+      "typ": "FJERTUCH",
+      "barva": "RUZOVA 2",
+      "file": "fjertuch_ruzova_2.jpeg"
+    },
+    {
+      "nazev": "Fjertuch Ruzova 3",
+      "typ": "FJERTUCH",
+      "barva": "RUZOVA 3",
+      "file": "fjertuch_ruzova_3.jpeg"
+    },
+    {
+      "nazev": "Fjertuch Zelena",
+      "typ": "FJERTUCH",
+      "barva": "ZELENA",
+      "file": "fjertuch_zelena.jpeg"
+    },
+    {
+      "nazev": "Fjertuch Zelena 2",
+      "typ": "FJERTUCH",
+      "barva": "ZELENA 2",
+      "file": "fjertuch_zelena_2.jpeg"
+    },
+    {
+      "nazev": "Fjertuch Zelena 3",
+      "typ": "FJERTUCH",
+      "barva": "ZELENA 3",
+      "file": "fjertuch_zelena_3.jpeg"
+    },
+    {
+      "nazev": "Pantle Bila",
+      "typ": "PANTLE",
+      "barva": "BILA",
+      "file": "pantle_bila.jpeg"
+    },
+    {
+      "nazev": "Pantle Cervena",
+      "typ": "PANTLE",
+      "barva": "CERVENA",
+      "file": "pantle_cervena.jpeg"
+    },
+    {
+      "nazev": "Pantle Modra",
+      "typ": "PANTLE",
+      "barva": "MODRA",
+      "file": "pantle_modra.jpeg"
+    },
+    {
+      "nazev": "Pantle Zelena",
+      "typ": "PANTLE",
+      "barva": "ZELENA",
+      "file": "pantle_zelena.jpeg"
+    },
+    {
+      "nazev": "Satek Bila",
+      "typ": "SATEK",
+      "barva": "BILA",
+      "file": "satek_bila.jpeg"
+    },
+    {
+      "nazev": "Satek Cervena",
+      "typ": "SATEK",
+      "barva": "CERVENA",
+      "file": "satek_cervena.jpeg"
+    },
+    {
+      "nazev": "Satek Modra",
+      "typ": "SATEK",
+      "barva": "MODRA",
+      "file": "satek_modra.jpeg"
+    },
+    {
+      "nazev": "Satek Modra 2",
+      "typ": "SATEK",
+      "barva": "MODRA 2",
+      "file": "satek_modra_2.jpeg"
+    },
+    {
+      "nazev": "Satek Ruzova",
+      "typ": "SATEK",
+      "barva": "RUZOVA",
+      "file": "satek_ruzova.jpeg"
+    },
+    {
+      "nazev": "Satek Zelena",
+      "typ": "SATEK",
+      "barva": "ZELENA",
+      "file": "satek_zelena.jpeg"
+    },
+    {
+      "nazev": "Sukne Bila",
+      "typ": "SUKNE",
+      "barva": "BILA",
+      "file": "sukne_bila.jpeg"
+    },
+    {
+      "nazev": "Sukne Cervena",
+      "typ": "SUKNE",
+      "barva": "CERVENA",
+      "file": "sukne_cervena.jpeg"
+    },
+    {
+      "nazev": "Sukne Zluta",
+      "typ": "SUKNE",
+      "barva": "ZLUTA",
+      "file": "sukne_zluta.jpeg"
+    }
+  ]
+}
