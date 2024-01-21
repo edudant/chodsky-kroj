@@ -1,0 +1,11 @@
+{{this.getLabel()}}
+<p-galleria [value]="getSoucastiKroje()" [responsiveOptions]="responsiveOptions" [containerStyle]="{ 'max-width': '640px' }" [numVisible]="7" [circular]="true">
+    <ng-template pTemplate="item" let-item>
+        <img [src]="'assets/kroje/' + item.file" style="height: 500px; width: 100%; display: block;" alt="Část kroje"/>
+    </ng-template>
+    <ng-template pTemplate="thumbnail" let-item>
+        <div class="grid grid-nogutter justify-content-center">
+            <img [src]="'assets/kroje/' + item.file" style="height: 100px; display: block;" alt="Část kroje - náhled"/>
+        </div>
+    </ng-template>
+</p-galleria>

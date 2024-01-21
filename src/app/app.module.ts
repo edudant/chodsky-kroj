@@ -17,6 +17,8 @@ import { ToolbarModule } from 'primeng/toolbar';
 import { ConfirmationService } from 'primeng/api';
 
 import { AppComponent } from './app.component';
+import {GalleriaModule} from "primeng/galleria";
+import {KrojGalerieComponent} from "./kroj-galerie/kroj-galerie.component";
 
 @NgModule({
     declarations: [
@@ -37,7 +39,9 @@ import { AppComponent } from './app.component';
         InputTextareaModule,
         RadioButtonModule,
         DropdownModule,
-        ButtonModule
+        ButtonModule,
+        GalleriaModule,
+        KrojGalerieComponent
     ],
     providers: [ConfirmationService],
     bootstrap: [AppComponent]

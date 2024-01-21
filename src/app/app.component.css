@@ -1,4 +1,77 @@
-.table-header {
+/* Základní reset pro obrázky a tlačítka */
+img, button {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Třída pro hlavní kontejner, který bude obsahovat všechny komponenty */
+.main-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    align-items: center; /* This will vertically align children in the middle */
+    justify-content: center;
+    gap: 20px; /* vytvoří mezery mezi komponentami */
+    padding: 20px;
+}
+
+/* Třída pro sloupce s galeriemi a centrálním obrázkem */
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* This will vertically center the content of the column */
+    gap: 20px;
+}
+
+/* Třída pro galerie */
+.gallery-container {
+    width: 100%; /* nebo max-width pokud je to potřeba */
+    margin: 10px 0;
+}
+
+/* Třída pro centrální obrázek */
+.central-image-container {
+    margin: 10px 0;
+    vertical-align: middle;
+}
+
+.central-image-container img {
+    max-width: 250px;
+    height: auto;
+}
+
+/* Styly pro tlačítko */
+.button-container {
+    text-align: center;
+    width: 100%;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Zelená barva */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+/* Responzivní úpravy */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .gallery-container {
+        order: 3; /* Zajistí, že galerie půjdou po centrálním obrázku */
+    }
+
+    .central-image-container {
+        order: 2; /* Centrální obrázek bude druhý */
+    }
+
+    .button-container {
+        order: 4; /* Tlačítko bude poslední */
+    }
 }

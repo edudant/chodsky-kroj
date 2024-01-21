@@ -1,42 +1,47 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfirmationService, MessageService } from 'primeng/api';
-import { Product } from './domain/product';
-import { ProductService } from './services/productservice';
+import { SoucastKroje } from './domain/soucastKroje';
+import { KrojService } from './services/kroj.service';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
-    providers: [ConfirmationService,MessageService,ProductService]
+    providers: [ConfirmationService,MessageService,KrojService]
 })
 export class AppComponent implements OnInit {
 
     productDialog: boolean;
 
-    products: Product[];
+    soucastiKroje: SoucastKroje[];
 
-    product: Product;
+    soucastKroje: SoucastKroje;
 
-    selectedProducts: Product[];
+    selectedProducts: SoucastKroje[];
 
     submitted: boolean;
 
-    statuses: any[];
+    typy: any[];
 
-    constructor(private productService: ProductService, private messageService: MessageService, private confirmationService: ConfirmationService) { }
+
+    getSoucastiKroje(typ: string) {
+        return this.soucastiKroje.filter(x => x.typ === typ);
+    }
+
+    constructor(private krojService: KrojService, private messageService: MessageService, private confirmationService: ConfirmationService) { }
 
     ngOnInit() {
-        this.productService.getProducts().then(data => this.products = data);
+        this.krojService.getSoucastiKroje().then(data => this.soucastiKroje = data);
 
-        this.statuses = [
+        this.typy = [
             {label: 'INSTOCK', value: 'instock'},
             {label: 'LOWSTOCK', value: 'lowstock'},
             {label: 'OUTOFSTOCK', value: 'outofstock'}
         ];
     }
 
-    openNew() {
-        this.product = {};
+    vyhodnot() {
+        this.soucastKroje = {nazev:'', typ: 'FJERTUCH', barva: '', file: ''};
         this.submitted = false;
         this.productDialog = true;
     }
@@ -47,75 +52,15 @@ export class AppComponent implements OnInit {
             header: 'Confirm',
             icon: 'pi pi-exclamation-triangle',
             accept: () => {
-                this.products = this.products.filter(val => !this.selectedProducts.includes(val));
+                this.soucastiKroje = this.soucastiKroje.filter(val => !this.selectedProducts.includes(val));
                 this.selectedProducts = null;
-                this.messageService.add({severity:'success', summary: 'Successful', detail: 'Products Deleted', life: 3000});
+                this.messageService.add({
+                    severity: 'success',
+                    summary: 'Successful',
+                    detail: 'Products Deleted',
+                    life: 3000
+                });
             }
         });
-    }
-
-    editProduct(product: Product) {
-        this.product = {...product};
-        this.productDialog = true;
-    }
-
-    deleteProduct(product: Product) {
-        this.confirmationService.confirm({
-            message: 'Are you sure you want to delete ' + product.name + '?',
-            header: 'Confirm',
-            icon: 'pi pi-exclamation-triangle',
-            accept: () => {
-                this.products = this.products.filter(val => val.id !== product.id);
-                this.product = {};
-                this.messageService.add({severity:'success', summary: 'Successful', detail: 'Product Deleted', life: 3000});
-            }
-        });
-    }
-
-    hideDialog() {
-        this.productDialog = false;
-        this.submitted = false;
-    }
-    
-    saveProduct() {
-        this.submitted = true;
-
-        if (this.product.name.trim()) {
-            if (this.product.id) {
-                this.products[this.findIndexById(this.product.id)] = this.product;                
-                this.messageService.add({severity:'success', summary: 'Successful', detail: 'Product Updated', life: 3000});
-            }
-            else {
-                this.product.id = this.createId();
-                this.product.image = 'product-placeholder.svg';
-                this.products.push(this.product);
-                this.messageService.add({severity:'success', summary: 'Successful', detail: 'Product Created', life: 3000});
-            }
-
-            this.products = [...this.products];
-            this.productDialog = false;
-            this.product = {};
-        }
-    }
-
-    findIndexById(id: string): number {
-        let index = -1;
-        for (let i = 0; i < this.products.length; i++) {
-            if (this.products[i].id === id) {
-                index = i;
-                break;
-            }
-        }
-
-        return index;
-    }
-
-    createId(): string {
-        let id = '';
-        var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        for ( var i = 0; i < 5; i++ ) {
-            id += chars.charAt(Math.floor(Math.random() * chars.length));
-        }
-        return id;
     }
 }
